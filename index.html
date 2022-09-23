@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="autor" content="IrynaH." />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Comfortaa"
+      rel="stylesheet"
+    />
+    <title>Luxury Jewelry: Mangata and Gallo</title>
+    <meta property="og:title" content="Luxury Jewelry: Mangata and Gallo" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.marta&gallo.com" />
+    <meta property="og:image" content="assets/Asset 1@3x.png" />
+  </head>
+  <body>
+    <header class="logo">
+      <img src="assets/Asset 1@3x.png" alt="Mangata and Gallo Logo" />
+    </header>
+    <nav class="navbar">
+      <ul class="links">
+        <li><a href="#home" class="active">HOME</a></li>
+        <li><a href="#nursery">ENGAGEMENT</a></li>
+        <li><a href="#services">WEDDING</a></li>
+        <li><a href="#about">ANNIVERSARY</a></li>
+      </ul>
+      <button class="navbar-toggle" onclick="navIcon()">
+        <div class="menu-icon">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </button>
+    </nav>
+    <hr class="rounded" />
+    <main>
+      <section class="banner" >
+        <div class="banner-text" role="img" aria-label="Promotional products photo">
+          <h1>Up to 30% Off*</h1>
+          <h1>Clearance</h1>
+          <p>Discover beautiful styles at amazing prices.</p>
+          <button class="btn">Shop now</button>
+        </div>
+        <div></div>
+      </section>
+      <section class="card-container">
+        <div class="column">
+          <div class="card">
+            <img
+              src="./assets/wedding-ring.jpeg"
+              alt="Wedding rings photo"
+              style="width: 100%"
+            />
+            <h2>WEDDING RINGS</h2>
+            <p>
+              When you find forever love, you celebrate it every day. Start your
+              journey together with wedding bands symbolizing your love and
+              commitment.
+            </p>
+            <button class="btn-link" style="margin: 1rem">Shop now</button>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <img
+              src="assets/design-ring.jpeg"
+              alt="Engagement rings photo"
+              style="width: 100%"
+            />
+            <h2>ENGAGEMENT RINGS</h2>
+            <p>
+              Work together with our experts to turn the ring you're picturing
+              into a stunning reality.
+            </p>
+            <h3>Custom Design From Scratch</h3>
+            <button class="btn-link" style="margin: 1rem">Design now</button>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <img
+              src="assets/gifts.webp"
+              alt="Anniversary gifts photo"
+              style="width: 100%"
+            />
+            <h2>ANNIVERSARY GIFTS</h2>
+            <p>
+              From traditional jewelry to personalized pieces, find the perfect
+              gift to celebrate your love story.
+            </p>
+            <div class="btn-group">
+              <button class="btn-link">Shop For Her</button>
+              <button class="btn-link">Shop For Him</button>
+              <button class="btn-link">Shop Best Seller</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="small-logo">
+        <img src="assets/Asset 1@3x.png" alt="Small Mangata and Gallo Logo" />
+      </div>
+      <div>
+        <p>&copy;<span id="date"></span> ALL RIGHTS RESERVED</p>
+      </div>
+    </footer>
+    <button id="top" title="Go to top" onclick="goTop()">
+      <div class="go-up-icon"></div>
+    </button>
+    <script>
+      function navIcon() {
+        const menuIcon = document.querySelector(".navbar-toggle");
+        const links = document.querySelector(".links");
+        const navbar = document.querySelector(".navbar");
+        if (links.classList.value === "links") {
+          menuIcon.style.transform = "rotate(90deg)";
+          links.classList.toggle("show-links");
+        } else {
+          links.classList.remove("show-links");
+          menuIcon.style.transform = "rotate(180deg)";
+        }
+      }
+    </script>
+    <script>
+      const goTopBtn = document.querySelector("#top");
+
+      window.addEventListener("scroll", () => {
+        if (document.documentElement.scrollTop > 500) {
+          goTopBtn.style.display = "block";
+        } else {
+          goTopBtn.style.display = "none";
+        }
+      });
+
+      function goTop() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+  </body>
+</html>
